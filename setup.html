@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescue Car Booking - Setup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            padding: 50px;
+            text-align: center;
+            animation: slideUp 0.5s ease;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+        
+        .status {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            text-align: left;
+        }
+        
+        .status-item {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        
+        .status-item.done {
+            color: #28a745;
+        }
+        
+        .status-item.pending {
+            color: #ffc107;
+        }
+        
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 20px 10px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .button.secondary {
+            background: #6c757d;
+        }
+        
+        .button.secondary:hover {
+            background: #5a6268;
+        }
+        
+        .info-box {
+            background: #e7f3ff;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            text-align: left;
+            font-size: 14px;
+        }
+        
+        .credentials {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            text-align: left;
+            font-size: 14px;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚗 Rescue Car Booking System</h1>
+        <p class="subtitle">Welcome! Let's get you set up.</p>
+        
+        <div class="status">
+            <div class="status-item done">✓ Background Image Configured</div>
+            <div class="status-item done">✓ CSS Styling Updated</div>
+            <div class="status-item done">✓ Database Files Ready</div>
+            <div class="status-item pending">⏳ Database Tables Need Import</div>
+        </div>
+        
+        <div class="info-box">
+            <strong>ℹ️ What's Next?</strong><br>
+            Click the button below to automatically set up your database. This will:
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Create the database</li>
+                <li>Import all tables</li>
+                <li>Add test data</li>
+                <li>Prepare the system for use</li>
+            </ul>
+        </div>
+        
+        <div>
+            <button class="button" onclick="startSetup()">
+                🔧 START DATABASE SETUP →
+            </button>
+        </div>
+        
+        <div class="credentials">
+            <strong>📋 Test Account (After Setup):</strong><br>
+            Username: <code>IAN</code><br>
+            Password: <code>123456</code><br>
+            Role: <code>Captain</code>
+        </div>
+        
+        <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid #eee;">
+            <p style="color: #666; font-size: 14px; margin-bottom: 15px;">
+                Already set up? 
+                <a href="index.php" style="color: #667eea; text-decoration: none; font-weight: 600;">Go to Login →</a>
+            </p>
+            <p style="color: #999; font-size: 12px;">
+                <a href="diagnostics.php" style="color: #999; text-decoration: none;">System Diagnostics</a> | 
+                <a href="SETUP_INSTRUCTIONS.md" style="color: #999; text-decoration: none;">Setup Guide</a>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        function startSetup() {
+            const button = event.target;
+            button.disabled = true;
+            button.innerHTML = '⏳ Setting up... Please wait...';
+            button.style.opacity = '0.6';
+            
+            // Redirect to setup script
+            setTimeout(() => {
+                window.location.href = 'setup_database.php';
+            }, 500);
+        }
+        
+        // Auto-redirect if setup is already done (optional - check localStorage)
+        window.onload = function() {
+            // You can add logic here to check if setup was already done
+            // and automatically redirect to login
+        };
+    </script>
+</body>
+</html>

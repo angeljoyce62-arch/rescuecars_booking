@@ -1,0 +1,49 @@
+/* Minimal Font Awesome 6.0 icons for Rescue Car Booking System */
+/* Unicode content for common icons used */
+
+.fas {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-car-side:before {
+  content: "\f5de"; /* Unicode for car-side */
+}
+
+.fa-user:before {
+  content: "\f007";
+}
+
+.fa-lock:before {
+  content: "\f09c";
+}
+
+.fa-eye:before {
+  content: "\f06e";
+}
+
+.fa-sign-in-alt:before {
+  content: "\f2f6";
+}
+
+.fa-exclamation-circle:before {
+  content: "\f06a";
+}
+
+/* Add more as needed */
+.fa-home:before { content: "\f015"; }
+.fa-sign-out-alt:before { content: "\f2f5"; }
+.fa-calendar:before { content: "\f073"; }
+.fa-check:before { content: "\f00c"; }
+.fa-times:before { content: "\f00d"; }
+.fa-edit:before { content: "\f044"; }
+.fa-trash:before { content: "\f1f8"; }
+.fa-bell:before { content: "\f0f3"; }
+.fa-cog:before { content: "\f013"; }

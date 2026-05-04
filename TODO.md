@@ -1,0 +1,1 @@
+# TODO: Set rescuecars.jpg as index background\n\n- [ ] Step 1: Edit assets/css/style.css to fix background-image path and filename for .login-page-bg\n- [ ] Step 2: Test by reloading index.php in browser\n- [ ] Step 3: Complete task
