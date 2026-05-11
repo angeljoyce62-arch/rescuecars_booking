@@ -261,7 +261,7 @@ body {
 .page-title {
     font-size: 28px;
     margin-bottom: 25px;
-    color: var(--text-color);
+    color: white !important;
     font-weight: 700;
     display: flex;
     align-items: center;
